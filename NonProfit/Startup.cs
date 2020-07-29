@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ToDoList.Models;
+using NonProfit.Models;
 
 namespace NonProfit
 {
@@ -44,7 +44,7 @@ namespace NonProfit
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Something went wrong!");
+        await context.Response.WriteAsync("Error has occured upon the last entry. Please contact the developer.");
       });
     }
   }
