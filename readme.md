@@ -2,7 +2,7 @@
 
 #### _A practice in C Sharp in Databases with a Non profit., 2020 ver 1.0_
 
-#### By _Ian Gregg & _
+#### By _Ian Gregg & Cody Fritz_
 [Non-Profit-Solution](https://github.com/oldgregg89/Non-Profit-Solution)
 
 ## Description
@@ -22,7 +22,7 @@ _A practice in C Sharp in Databases with a Non profit._
 * run `dotnet add package Microsoft.EntityFrameworkCore -v 2.2.0`  &
 `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
 in the terminal
-* add a file to the root directory called `appsetting.json`
+* add a file called `appsetting.json` in the NonProfit directory.
 * in `appsetting.json` add ![appsetting.json](Assets/setup.png)
 * fill in your `server`, `port`,`database`,`uid`, and `pwd`
 
@@ -53,7 +53,7 @@ _The Technologies used in the making of this software was Chrome browser, Visual
 
 ### License
 
-Copyright (c) 2020 **_Ian Gregg & Tyson Lackey & Chris Yoon_**
+Copyright (c) 2020 **_Ian Gregg & Cody Fritz_**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
