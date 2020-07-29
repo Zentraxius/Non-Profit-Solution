@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using NonProfit.Models;
+@model List<NonProfit.Models.Donations>;
+
+<h1>Donations</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No donations have been added yet! Get out there and fund raise!</h3>
+} 
+
+@foreach (Donation donation in Model)
+{
+  <li>@Html.ActionLink($"{donation.Money}", "Donation amount", new { id = donations.DonationId }) | @donation.Donor.Name</li>
+}
+
+<p>@Html.ActionLink("Add new donation", "Create")</p>
