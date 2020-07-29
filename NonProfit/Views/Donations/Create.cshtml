@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-@model NonProfit.Models.Item
+@model NonProfit.Models.Donation
 
 <h4>Add a new Donation</h4>
 
@@ -12,7 +12,7 @@
     @Html.TextBoxFor(model => model.Money)
 
     @Html.LabelFor(model => model.Donor)
-    @Html.DropDownList("CategoryId")
+    @Html.DropDownList("DonorId")
 
     <input type="submit" value="Add new donation" class="btn btn-default" />
 }

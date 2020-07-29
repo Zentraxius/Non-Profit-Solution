@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
+
 namespace NonProfit.Models
 {
   public class Donation

@@ -3,7 +3,7 @@
 }
 
 @using NonProfit.Models;
-@model List<NonProfit.Models.Donations>;
+@model List<NonProfit.Models.Donation>;
 
 <h1>Donations</h1>
 
@@ -14,7 +14,7 @@
 
 @foreach (Donation donation in Model)
 {
-  <li>@Html.ActionLink($"{donation.Money}", "Donation amount", new { id = donations.DonationId }) | @donation.Donor.Name</li>
+  <li>@Html.ActionLink($"{donation.Money}", "Donation amount", new { id = donation.DonationId }) | @donation.Donor.Name</li>
 }
 
 <p>@Html.ActionLink("Add new donation", "Create")</p>

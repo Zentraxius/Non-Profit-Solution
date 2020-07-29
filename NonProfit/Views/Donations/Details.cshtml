@@ -1,11 +1,11 @@
 @{
   Layout = "_Layout";
 }
-@model NonProfit.Models.Item
+@model NonProfit.Models.Donation
 
 <h2>Donation Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Money): @Html.DisplayFor(model => model.Money)<h3>
 <p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.DonationId })</p>
-<p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.DonationId })</p>
+<p>@Html.ActionLink("Edit Donation", "Edit", new { id = Model.DonationId })</p>
+<p>@Html.ActionLink("Delete Donation", "Delete", new { id = Model.DonationId })</p>

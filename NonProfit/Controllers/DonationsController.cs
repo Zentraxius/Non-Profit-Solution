@@ -16,7 +16,7 @@ namespace NonProfit.Controllers
     }
     public ActionResult Details( int id )
     {
-      Item thisItem = _db.Donations.FirstOrDefault(donations => donations.DonationsId == id);
+      Donation thisDonation = _db.Donations.FirstOrDefault(donations => donations.DonationId == id);
       return View(thisDonation);
     }
     public ActionResult Create()
@@ -26,22 +26,22 @@ namespace NonProfit.Controllers
     }
     public ActionResult Edit (int id)
     {
-      var thisItem = _db.Donations.FirstOrDefault(Donations => Donations.DonationId == id);
-      ViewBag.CategoryId = new SelectList(_db.Donor, "DonorId", "Name");
+      var thisDonation = _db.Donations.FirstOrDefault(Donations => Donations.DonationId == id);
+      ViewBag.DonorId = new SelectList(_db.Donors, "DonorId", "Name");
       return View(thisDonation);
     }
     
     public ActionResult Delete(int id)
     {
-      var thisItem = _db.Donations.FirstOrDefault(donations => donations.DonationId == id);
+      var thisDonation = _db.Donations.FirstOrDefault(donations => donations.DonationId == id);
       return View(thisDonation);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisItem = _db.Donations.FirstOrDefault(donations => donations.DonationsId == id);
-      _db.Items.Remove(thisDonation);
+      var thisDonation = _db.Donations.FirstOrDefault(donations => donations.DonationId == id);
+      _db.Donations.Remove(thisDonation);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
@@ -55,13 +55,13 @@ namespace NonProfit.Controllers
     [HttpPost]
     public ActionResult Create(Donation donation)
     {
-      _db.Items.Add(donation);
+      _db.Donations.Add(donation);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
     public ActionResult Index()
     {
-      List<Item> model = _db.Donation.Include(donations => donations.Donor).ToList();
+      List<Donation> model = _db.Donations.Include(donations => donations.Donor).ToList();
       return View(model);
     }
   }
