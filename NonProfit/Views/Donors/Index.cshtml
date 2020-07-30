@@ -12,5 +12,7 @@
   <h3><a href='/donors/@donor.DonorId'>@donor.Name</a></h3>
 }
 
-<p><a href='/'>Back home</a></p>
+@* <p><a href='/'>Back home</a></p> *@
+
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Add new donor", "Create")</p>
