@@ -16,7 +16,7 @@ namespace NonProfit.Controllers
     }
     public ActionResult Details( int id )
     {
-      Donation thisDonation = _db.Donations.FirstOrDefault(donations => donations.DonationId == id);
+      Donation thisDonation = _db.Donations.Include(Donation => Donation.Donor).FirstOrDefault(donations => donations.DonationId == id);
       return View(thisDonation);
     }
     public ActionResult Create()
