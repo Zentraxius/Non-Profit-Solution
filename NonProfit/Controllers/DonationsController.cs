@@ -21,7 +21,7 @@ namespace NonProfit.Controllers
     }
     public ActionResult Create()
     {
-    ViewBag.DonorsId = new SelectList(_db.Donors, "DonorId", "Name");
+    ViewBag.DonorId = new SelectList(_db.Donors, "DonorId", "Name");
     return View();
     }
     public ActionResult Edit (int id)
