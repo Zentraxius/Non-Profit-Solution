@@ -14,7 +14,8 @@
 
 @foreach (Donation donation in Model)
 {
-  <li>@Html.ActionLink($"{donation.Money}", "Donation amount", new { id = donation.DonationId }) | @donation.Donor.Name</li>
+  <li>@Html.ActionLink($"{donation.Money}", "Details", new { id = donation.DonationId }) | @donation.Donor.Name</li>
 }
 
 <p>@Html.ActionLink("Add new donation", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
